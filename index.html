@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Password Genrator</title>
+</head>
+<body>
+    
+
+    <button onclick="Genrator()">Password Genrator</button>
+
+    <script>
+       
+        function Genrator(){
+        var alph = ["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","u","v","w","x","y","z"];
+        var bigAlph = alph.toString().toUpperCase().split(",");
+        var symbol = ["!","@","%","#","$","&"];
+        var num = Math.floor(Math.random()*899+100);
+        var num1 = Math.floor(Math.random()*100);
+        var result = num + symbol[Math.floor(Math.random()*symbol.length)] + bigAlph[Math.floor(Math.random()*bigAlph.length)] + alph[Math.floor(Math.random()*alph.length)] + num1;
+        document.write(`Your Password is : ${result}`);
+        console.log(result);
+        }
+      
+        
+
+    </script>
+</body>
+</html>
